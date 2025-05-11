@@ -1,0 +1,1237 @@
+/*
+Theme Name: EC Template
+Theme URI: https://example.com/
+Author: Ichikawa
+Author URI: https://example.com/
+Description: 店舗ごとにデザインを変えられるECサイト用カスタムテーマ
+Version: 1.0
+*/
+
+/* ========== ベーススタイル ========== */
+
+/* =====================
+   ① 基本フォント・カラーの統一
+   ===================== */
+
+body {
+  font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
+  background-color: #fffaf7;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  color: #ffaf59;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #cc8c14;
+}
+
+button,
+input[type="submit"] {
+  background-color: #ffd359;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #cc7914;
+}
+
+/* ボタン共通スタイル */
+.cta-button {
+  background-color: #ffe159;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #cca114;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  font-weight: bold;
+}
+
+/* セクション見出し */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #444;
+}
+
+/* 次のステップ：② 各セクションの余白とレイアウト調整へ */
+
+body {
+  font-family: "Yu Gothic", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf7;
+  color: #333;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+/* ========== HEROセクション ========== */
+#hero {
+  background: url("./assets/hero-bg.jpg") center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #666;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
+/* ========== 商品セクション ========== */
+#products .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product-item {
+  width: 240px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 1.1rem;
+}
+
+/* ========== 店舗紹介 ========== */
+#shop-info {
+  background-color: #eee;
+  text-align: center;
+}
+
+#shop-info p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ========== グローバルナビゲーション（右縦固定） ========== */
+.global-nav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 200px;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 10px;
+  z-index: 999;
+}
+
+.global-nav .menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.global-nav .menu-items li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.global-nav .menu-items li a:hover {
+  color: #ffca59;
+}
+
+/* ========== ショップページ用 ========== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.product {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.price {
+  color: #ffd359;
+  font-weight: bold;
+}
+
+/* 商品カード内のスタイル */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+/* 各商品 */
+.product {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+.product:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 商品タイトル */
+.product-title {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+/* 価格 */
+.price {
+  color: #ffe030;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* カートに入れるボタン */
+.add_to_cart_button,
+.button.product_type_simple {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffeac1;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+.add_to_cart_button:hover,
+.button.product_type_simple:hover {
+  background-color: #ffe797;
+}
+
+/* カートボタンが無効（売り切れ）なとき */
+.add_to_cart_button.disabled {
+  background-color: #ccc;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* ========== ショップグローバルメニュー ========== */
+
+.shop-top-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shop-top-menu .shop-search-form input[type="search"] {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.shop-top-menu .shop-top-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.shop-top-menu .shop-top-link:hover {
+  color: #ffee59;
+}
+
+/* ========== カート用 ========== */
+
+.cart-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.cart-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.woocommerce-cart-form {
+  margin-bottom: 50px;
+}
+
+.shop_table.cart {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shop_table.cart th,
+.shop_table.cart td {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.shop_table.cart th {
+  background: #f9f9f9;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.product-name a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.product-name a:hover {
+  color: #f8ff99;
+}
+
+.product-subtotal,
+.product-quantity {
+  font-size: 1.1rem;
+}
+
+.product-remove a {
+  color: #999;
+  font-size: 1.5rem;
+}
+
+.product-remove a:hover {
+  color: #ff0000;
+}
+
+/* 合計金額 */
+.cart-totals {
+  text-align: center;
+}
+
+.cart-totals h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.checkout-button-wrap {
+  margin-top: 30px;
+}
+
+.checkout-button {
+  display: inline-block;
+  background: #fced81;
+  color: white;
+  padding: 15px 50px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.checkout-button:hover {
+  background: #f5ffc6;
+}
+
+/* カートページの全体レイアウト */
+.cart-page {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  font-family: "Yu Gothic", sans-serif;
+}
+
+/* タイトル */
+.cart-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* テーブル */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #ddd;
+  padding: ;
+}
+
+/* ========== チェックアウトページ========== */
+.checkout-page {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.checkout-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ========== インフォメーションページ共通 ========== */
+.information-page section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+}
+
+.news-list li {
+  margin: 10px 0;
+}
+
+/* インフォメーション専用 左メニュー */
+.info-subnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 180px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  padding: 100px 20px 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  z-index: 900;
+}
+
+.info-subnav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-subnav li {
+  margin-bottom: 20px;
+}
+
+.info-subnav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  transition: color 0.2s;
+}
+
+.info-subnav a:hover {
+  color: #ff7d59;
+}
+
+/* メインコンテンツは左ナビの分ずらす */
+.information-page .main-content {
+  margin-left: 200px;
+  padding: 40px;
+}
+
+/* ========== ニュース記事表示 ========== */
+.news-item {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.news-item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.news-item .date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+/* ========== FAQ表示 ========== */
+#faq {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #e0e0e0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+.faq-answer.open {
+  max-height: 200px;
+  padding-top: 10px;
+}
+
+/* ========== レスポンシブ調整 ========== */
+@media (max-width: 768px) {
+  .global-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #ccc;
+    padding: 8px;
+    border: none;
+    font-size: 1.2em;
+  }
+}
+
+/* --------------------------------------------------
+Theme Name: EC Template
+Description: 店舗ごとにデザインを変えられるECサイト用カスタムテーマ
+Version: 1.0
+Author: Ichikawa
+-------------------------------------------------- */
+
+/* ------------------------------
+共通設定
+------------------------------ */
+body {
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf7;
+  color: #333;
+}
+
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ------------------------------
+  ヘッダー
+  ------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.site-title a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ------------------------------
+  トップページ：HEROセクション
+  ------------------------------ */
+#hero {
+  background: #ffe5ec;
+  background: url("./assets/hero-bg.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #fff9d2;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
+/* ------------------------------
+  商品リスト
+  ------------------------------ */
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: 240px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 1.1rem;
+}
+
+/* ------------------------------
+  インフォメーション（NEWS/FAQ）
+  ------------------------------ */
+.information-page section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news-item {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.news-item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.news-item .date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #e0e0e0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+.faq-answer.open {
+  max-height: 200px;
+  padding-top: 10px;
+}
+/* --------------------------------------------------
+Theme Name: EC Template
+Description: 店舗ごとにデザインを変えられるECサイト用カスタムテーマ
+Version: 1.0
+Author: Ichikawa
+-------------------------------------------------- */
+
+/* ------------------------------
+共通設定
+------------------------------ */
+body {
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf7;
+  color: #333;
+}
+
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ------------------------------
+  ヘッダー
+  ------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.site-title a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ------------------------------
+  トップページ：HEROセクション
+  ------------------------------ */
+#hero {
+  background: #ffe5ec;
+  background: url("./assets/hero-bg.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #f0ffc3;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
+/* ------------------------------
+  商品リスト
+  ------------------------------ */
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: 240px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #ffdb63;
+  font-size: 1rem;
+}
+
+/* ------------------------------
+  インフォメーション（NEWS/FAQ）
+  ------------------------------ */
+.information-page section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news-item {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.news-item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.news-item .date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #e0e0e0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+.faq-answer.open {
+  max-height: 200px;
+  padding-top: 10px;
+}
+
+/* --------------------------------------------------
+Theme Name: EC Template
+Description: 店舗ごとにデザインを変えられるECサイト用カスタムテーマ
+Version: 1.0
+Author: Ichikawa
+-------------------------------------------------- */
+
+/* ------------------------------
+共通設定
+------------------------------ */
+body {
+  font-family: "Yu Gothic", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf7;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ------------------------------
+  ヘッダー
+  ------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.site-title a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ------------------------------
+  トップページ：HEROセクション
+  ------------------------------ */
+#hero {
+  background: #ffe5ec;
+  background: url("./assets/hero-bg.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ffdb59;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
+/* ------------------------------
+  商品リスト
+  ------------------------------ */
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: 240px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #ffe5a3;
+  font-size: 1rem;
+}
+
+/* ------------------------------
+  インフォメーション（NEWS/FAQ）
+  ------------------------------ */
+.information-page section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news-item {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.news-item h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.news-item .date {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #e0e0e0;s
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+
+.faq-answer.open {
+  max-height: 200px;
+  padding-top: 10px;
+}
+
+
+
+.woocommerce-shipping-destination {
+    display: none !important;
+  }
+
+/* ページ全体は通常レイアウトのままに */
+.woocommerce-checkout {
+    display: block;
+  }
+  
+  /* フォーム部分だけ中央に */
+  .woocommerce-checkout form.checkout {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  
+
+  /* WooCommerce 商品一覧の表示修正 */
+.woocommerce ul.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .woocommerce ul.products li.product {
+    width: 240px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .woocommerce ul.products li.product:hover {
+    transform: translateY(-5px);
+  }
+  
+  .woocommerce ul.products li.product img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .woocommerce ul.products li.product .price {
+    font-weight: bold;
+    color: #ff7f00;
+    margin-bottom: 10px;
+  }
+  
+  .woocommerce ul.products li.product .button {
+    background-color: #ff7f00;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .woocommerce ul.products li.product .button:hover {
+    background-color: #cc6600;
+  }
+  
